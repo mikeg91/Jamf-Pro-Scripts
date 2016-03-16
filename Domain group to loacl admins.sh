@@ -1,1 +1,1 @@
-sudo dsconfigad -groups "IT Workstation Support"
+sudo dsconfigad -groups "your domain group name here"
