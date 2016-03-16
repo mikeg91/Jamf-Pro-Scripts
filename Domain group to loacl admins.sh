@@ -1,0 +1,1 @@
+sudo dsconfigad -groups "IT Workstation Support"
