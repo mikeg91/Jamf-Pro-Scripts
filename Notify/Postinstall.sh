@@ -9,10 +9,10 @@ VERIFY_FILENAME=JamfConnectVerify-x.pkg
 SYNC_FILENAME=JamfConnectSync-1.2.2.pkg
 
 # Install Login
-installer -pkg "$TMP_PATH"/"$LOGIN_FILENAME" -target 
+installer -pkg "$TMP_PATH"/"$LOGIN_FILENAME" -target /
 
 # if Okta installation, use this command:
-installer -pkg "$TMP_PATH"/"$SYNC_FILENAME" -target 
+installer -pkg "$TMP_PATH"/"$SYNC_FILENAME" -target /
 
 # FANCY VERSION: Okta with EULA and post login script with Notify mechanism
 /usr/local/bin/authchanger -reset -Okta -postAuth JamfConnectLogin:Notify JamfConnectLogin:RunScript,privileged
@@ -23,7 +23,7 @@ installer -pkg "$TMP_PATH"/"$SYNC_FILENAME" -target
 
 
 # Use the killall command to make sure that a slow network connection will kill the standard macOS login window after the pkg has fully installed.
-/usr/bin/killall -9 loginwindow
+#/usr/bin/killall -9 loginwindow
 
 exit 0      ## Success
 exit 1      ## Fail
