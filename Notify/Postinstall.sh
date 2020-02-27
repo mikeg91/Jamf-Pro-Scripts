@@ -15,7 +15,7 @@ installer -pkg "$TMP_PATH"/"$LOGIN_FILENAME" -target
 installer -pkg "$TMP_PATH"/"$SYNC_FILENAME" -target 
 
 # FANCY VERSION: Okta with EULA and post login script with Notify mechanism
-/usr/local/bin/authchanger -reset -Okta —DefaultJCRight -preAuth JamfConnectLogin:RunScript,privileged -postAuth JamfConnectLogin:Notify
+/usr/local/bin/authchanger -reset -Okta -postAuth JamfConnectLogin:Notify JamfConnectLogin:RunScript,privileged
 #/usr/local/bin/authchanger -reset -Okta -preAuth JamfConnectLogin:RunScript,privileged
 
 # BASIC VERSION: Just Okta Login.  No scripting or EULA.
