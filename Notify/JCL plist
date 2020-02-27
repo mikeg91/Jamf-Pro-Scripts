@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AllowNetworkSelection</key>
+	<true/>
+	<key>AuthServer</key>
+	<string>company.okta.com</string>
+	<key>CreateAdminUser</key>
+	<true/>
+	<key>CreateSyncPasswords</key>
+	<true/>
+	<key>LoginLogo</key>
+	<string>/usr/local/bin/company_log_250.png</string>
+	<key>OIDCProvider</key>
+	<string>Okta</string>
+	<key>ScriptPath</key>
+	<string>/usr/local/bin/Notify.sh</string>
+</dict>
+</plist>
