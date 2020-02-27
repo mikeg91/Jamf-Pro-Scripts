@@ -9,10 +9,10 @@ VERIFY_FILENAME=JamfConnectVerify-x.pkg
 SYNC_FILENAME=JamfConnectSync-1.2.2.pkg
 
 # Install Login
-installer -pkg "$TMP_PATH"/"$LOGIN_FILENAME" -target $3
+installer -pkg "$TMP_PATH"/"$LOGIN_FILENAME" -target 
 
 # if Okta installation, use this command:
-installer -pkg "$TMP_PATH"/"$SYNC_FILENAME" -target $3
+installer -pkg "$TMP_PATH"/"$SYNC_FILENAME" -target 
 
 # FANCY VERSION: Okta with EULA and post login script with Notify mechanism
 /usr/local/bin/authchanger -reset -Okta —DefaultJCRight -preAuth JamfConnectLogin:RunScript,privileged -postAuth JamfConnectLogin:Notify
