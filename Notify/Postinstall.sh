@@ -5,7 +5,6 @@
 
 TMP_PATH=/private/tmp
 LOGIN_FILENAME=JamfConnectLoginOkta-1.9.0.pkg
-VERIFY_FILENAME=JamfConnectVerify-x.pkg
 SYNC_FILENAME=JamfConnectSync-1.2.2.pkg
 
 # Install Login
