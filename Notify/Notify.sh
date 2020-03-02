@@ -13,12 +13,12 @@ echo "STARTING RUN" >> $NOTIFY_LOG
 
 # Define the number of increments for the progress bar
 
-echo "Command: Determinate: 6" >> $NOTIFY_LOG
+echo "Command: Determinate: 10" >> $NOTIFY_LOG
 
 #1 - Introduction window with username and animation
 
 echo "Command: Image: /System/Library/CoreServices/CoreTypes.bundle/Contents/Resources/com.apple.macbookpro-15-retina-touchid-space-gray.icns" >> $NOTIFY_LOG
-echo "Command: MainTitle: Welcome to Company!" >> $NOTIFY_LOG
+echo "Command: MainTitle: Welcome to Invitae!" >> $NOTIFY_LOG
 echo "Command: MainText: Your Mac is now managed and will be automatically configured for you. \n $TOKEN_GIVEN_NAME" >> $NOTIFY_LOG
 echo "Status: Preparing your new Mac..." >> $NOTIFY_LOG
 sleep 10
@@ -34,6 +34,11 @@ sleep 5
 
 #4 - Install Applications
 ##Jamf Triggers
+
+echo "Command: Image: /System/Library/CoreServices/Install in Progress.app/Contents/Resources/Installer.icns" >> $NOTIFY_LOG
+echo "Status: Setting Hostname..." >> $NOTIFY_LOG
+$JAMF_BINARY policy -event "JC-Hostname"
+sleep 5
 
 echo "Command: Image: /usr/local/bin/SentinelOne.png" >> $NOTIFY_LOG
 echo "Status: Installing SentinelOne..." >> $NOTIFY_LOG
@@ -63,6 +68,11 @@ sleep 5
 echo "Command: Image: /usr/local/bin/slack.icns" >> $NOTIFY_LOG
 echo "Status: Installing Slack..." >> $NOTIFY_LOG
 $JAMF_BINARY policy -event "JC-Slack"
+sleep 5
+
+echo "Command: Image: /usr/local/bin/Cleanup.png" >> $NOTIFY_LOG
+echo "Status: Cleaning things up..." >> $NOTIFY_LOG
+$JAMF_BINARY policy -event "JC-AuthChange"
 sleep 5
 
 # - Finishing up
