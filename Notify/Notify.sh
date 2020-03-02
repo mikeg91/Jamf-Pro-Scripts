@@ -18,7 +18,7 @@ echo "Command: Determinate: 10" >> $NOTIFY_LOG
 #1 - Introduction window with username and animation
 
 echo "Command: Image: /System/Library/CoreServices/CoreTypes.bundle/Contents/Resources/com.apple.macbookpro-15-retina-touchid-space-gray.icns" >> $NOTIFY_LOG
-echo "Command: MainTitle: Welcome to Invitae!" >> $NOTIFY_LOG
+echo "Command: MainTitle: Welcome to Company!" >> $NOTIFY_LOG
 echo "Command: MainText: Your Mac is now managed and will be automatically configured for you. \n $TOKEN_GIVEN_NAME" >> $NOTIFY_LOG
 echo "Status: Preparing your new Mac..." >> $NOTIFY_LOG
 sleep 10
