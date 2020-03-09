@@ -10,7 +10,7 @@ serial_no=$(ioreg -c IOPlatformExpertDevice -d 2 | awk -F\" '/IOPlatformSerialNu
 
 #gets named
 firstInitial=$(finger -s $getUser | head -2 | tail -n 1 | awk '{print tolower($2)}' | cut -c 1)
-lastName=$(finger -s $getUser | head -2 | tail -n 1 | awk '{print tolower($3)}')
+lastName=$(finger -s $getUser | head -2 | tail -n 1 | awk '{print tolower($3)}' | cut -c 1-10)
 
 # combines everything for device name
 computerName=${firstInitial}${lastName}-${serial_no}
