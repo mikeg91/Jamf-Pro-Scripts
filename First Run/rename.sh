@@ -1,7 +1,7 @@
 
 #!/bin/sh
 
-#gets current logged in user
+#gets current logged in user from home directory names
 getUser=$(ls  "/Users/" | grep -v '^[.*]' | grep -v '.admin' | grep -v 'Administrator' | grep -v 'administrator'| grep -v 'Guest' |  grep -v 'Shared')
 
 # gets serial number of device, counts back 4 characters and adds dash ie -1234
