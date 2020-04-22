@@ -1,2 +1,3 @@
-# Casper_Scripts
-Scripts I use in my Casper Suite, feel free to use them in yours.
+# Jamf Pro Scripts
+
+Scripts I use in my Jamf Pro, feel free to use them in yours.
