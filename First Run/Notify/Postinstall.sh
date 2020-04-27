@@ -12,5 +12,7 @@ installer -pkg /tmp/JamfConnectSync-1.2.2.pkg -target /
 # Set JCL to use Okta as auth source and run Notify Script afterwards
 /usr/local/bin/authchanger -reset -Okta -postAuth JamfConnectLogin:Notify JamfConnectLogin:RunScript,privileged
 
+/usr/bin/killall -9 loginwindow
+
 exit 0      ## Success
 exit 1      ## Fail
