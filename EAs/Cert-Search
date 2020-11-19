@@ -1,0 +1,22 @@
+#!/bin/bash
+#Created Nov 11, 2020 by mgrady
+#
+#script checks is Jamf AD CS Connect cert is present.
+
+
+# Declare variables
+ADCSCert=$Cert-Name
+
+# Check if AD CS Cert is deployed to machine
+DeployedCert=$(/usr/bin/security find-certificate -a -c $ADCSCert -p -Z "/Library/Keychains/System.keychain" | grep SHA-1 | wc | awk '{print $1}')
+
+# Show if cert is present or not
+if [ $DeployedCert == 1 ]; then
+echo "<result>Mac has Network-Cert</result>"
+exit 0
+
+elif [ $DeployedCert == 0 ]; then
+echo "<result>Missing Network-Cert</result>"
+exit 0
+
+fi
