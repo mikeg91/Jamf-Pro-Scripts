@@ -1,5 +1,5 @@
 #!/bin/bash
-#Created Nov 11, 2020 by mgrady
+#Created Nov 11, 2020 by mikeg91
 #
 #script checks is Jamf AD CS Connect cert is present.
 
