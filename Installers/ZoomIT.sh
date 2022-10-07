@@ -12,6 +12,10 @@
 #     Modified keys for current employer who uses SSO
 #     Sanitizing for Github
 #
+# Version 1.3
+#  - Mike Grady
+#     Updated download link
+#
 ####################################################################################################
 # Script to download and install Zoom.
 #
@@ -44,7 +48,7 @@ if [ '`/usr/bin/uname -p`'="i386" -o '`/usr/bin/uname -p`'="x86_64" ]; then
         userAgent="Mozilla/5.0 (Macintosh; Intel Mac OS X ${OSvers_URL}) AppleWebKit/535.6.2 (KHTML, like Gecko) Version/5.2 Safari/535.6.2"
 
         # Get the latest version of Reader available from Zoom page.
-        latestver=`/usr/bin/curl -s -A "$userAgent" https://zoom.us/download | grep 'ZoomInstallerIT.pkg' | awk -F'/' '{print $3}'`
+        latestver=`/usr/bin/curl -s -A "$userAgent" https://support.zoom.us/hc/en-us/articles/201361963-Release-notes-for-macOS | grep 'version 5.' | head -1 | sed 's/^.*5./5./' | tr -d ' ' | sed -r 's/[(]+/./g' | cut -f1 -d")"` 
         echo "Latest Version is: $latestver"
 
         # Get the version number of the currently-installed Zoom, if any.
