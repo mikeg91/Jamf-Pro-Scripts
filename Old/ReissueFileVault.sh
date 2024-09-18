@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# No longer working, Escrow buddy is the better option. 
+
 ###
 #
 #            Name:  reissue_filevault_recovery_key.sh
